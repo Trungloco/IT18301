@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a = prompt("nhap so nguyen a: ");
+        let a1 = parseInt(a)
+        let b = prompt("nhap so nguyen b: ");
+        let b1 = parseInt(b);
+        let c = prompt("nhap so nguyen c: ");
+        let c1 = parseInt(c);
+       if(a==0)
+       {
+        if(b==0)
+        {
+           if(c==0)
+           {
+            console.log("phuong trinh co vo so nghiem !");
+           }
+           else
+           {
+            console.log("phuong trinh vo nghiem !");
+           }
+        }
+        else
+        {
+            console.log("phuong trinh co nghiem duy nhat x = "+(-c/b));
+        }
+       }
+       else
+       {
+            let delTa = b*b-4*a*c;
+            if(delTa<0)
+            {
+                console.log("phuong trinh vo nghiem");
+            }
+            else if(delTa==0)
+            {
+               console.log("phuong trinh co nghiem kep x1=x2= "+(-b/2*a));
+            }
+            else
+            {
+                console.log("phuong trinh co 2 nghiem phan biet: ");
+                console.log("x1 = "+((Math.sqrt(delTa))/(2*a)));
+                console.log("x2 = "+((-b1-Math.sqrt(delTa))/2*a));
+            }
+       }
+
+    </script>
+</body>
+</html>
