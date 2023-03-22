@@ -25,11 +25,11 @@
         do
         {
             check = true;
-            toan = parseFloat(prompt("xin moi nhap diem toan : "));
+            toan = parseFloat(prompt("Xin moi nhap diem toan : "));
             if(checkDiem(toan)==false||toan==null||toan=="")
             {
-                alert("ban da nhap diem khong hop le!!");
-                alert("vui long nhap lai o khoang diem tu 0 -- > 10");
+                alert("Ban da nhap diem khong hop le!");
+                alert("Vui long nhap lai o khoang diem tu 0 den 10");
                 check =false;
             }
         }
@@ -37,11 +37,11 @@
         do
         {
             check = true;
-            ly = parseFloat(prompt("xin moi nhap diem ly : "));
+            ly = parseFloat(prompt("Xin moi nhap diem ly : "));
             if(checkDiem(ly)==false||ly==null||ly=="")
             {
-                alert("ban da nhap diem khong hop le!!");
-                alert("vui long nhap lai o khoang diem tu 0 -- > 10");
+                alert("Ban da nhap diem khong hop le!!");
+                alert("Vui long nhap lai o khoang diem tu 0 -- > 10");
                 check =false;
             }
         }
@@ -49,11 +49,11 @@
         do
         {
             check = true;
-            hoa = parseFloat(prompt("xin moi nhap diem hoa : "));
+            hoa = parseFloat(prompt("Xin moi nhap diem hoa : "));
             if(checkDiem(hoa)==false||hoa==null||hoa=="")
             {
-                alert("ban da nhap diem khong hop le!!");
-                alert("vui long nhap lai o khoang diem tu 0 -- > 10");
+                alert("Ban da nhap diem khong hop le!!");
+                alert("Vui long nhap lai o khoang diem tu 0 -- > 10");
                 check =false;
             }
         }
@@ -61,11 +61,11 @@
         do
         {
             check = true;
-            sinh = parseFloat(prompt("xin moi nhap diem sinh : "));
+            sinh = parseFloat(prompt("Xin moi nhap diem sinh : "));
             if(checkDiem(sinh)==false||sinh==null||sinh=="")
             {
-                alert("ban da nhap diem khong hop le!!");
-                alert("vui long nhap lai o khoang diem tu 0 -- > 10");
+                alert("Ban da nhap diem khong hop le!!");
+                alert("Vui long nhap lai o khoang diem tu 0 -- > 10");
                 check =false;
             }
         }
@@ -76,16 +76,16 @@
         console.log("1. Tính điểm trung bình (switch case)");
         console.log("2. Tính điểm trung bình (if else)");
         console.log("0. Thoát");
-        let choice = prompt("xin moi ban lua chon 1 && 2 : ");
+        let choice = prompt("Xin moi ban lua chon 1 && 2 : ");
         switch(choice)
         {
             case "1" :
                 {
-                    console.log("diem trung binh cua hoc sinh la : " + diemTB);
+                    console.log("Diem trung binh cua hoc sinh la : " + diemTB);
                     switch(true)
                     {
                         case (diemTB >= 9):
-                        console.log("hoc luc gioi");
+                        console.log("Hoc luc gioi");
                         break;
                         case (diemTB >= 7):
                         console.log("Hoc luc kha");
@@ -103,21 +103,16 @@
             {
                 let xepLoai;
             if(diemTB >= 9){
-                xepLoai = " gioi";
+                xepLoai = "Hoc luc gioi";
             }else if(diemTB >= 7 ){
-                xepLoai = "kha";
+                xepLoai = "Hoc luc kha";
             }else if(diemTB >= 5){
-                xepLoai = "trung binh";
+                xepLoai = "Hoc luc trung binh";
             }else{
-                xepLoai = "yeu";
+                xepLoai = "Hoc luc yeu";
             }
-               console.log("diem trung binh cua hoc sinh la : " + diemTB +" "+ "xep loai: " +xepLoai);
-
-
+               console.log("Diem trung binh cua hoc sinh la : " + diemTB +" "+ "Xep loai: " +xepLoai);
             }
-               
-            
-        
         }   
         
     </script>
