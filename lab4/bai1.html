@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    class SV{
+    constructor(id, firstName, lastName, classID, email, phoneNumber, dob)
+    {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.classID = classID;
+        this.email = email;
+        this.phoneNumber = phoneNumber
+        this.dob = new Date(dob);
+    }
+   getFullName(){
+    this.firstName+" "+this.lastName;
+    return;
+   }
+   //tính tuổi theo ngày
+    getAgeDay()
+    {
+        const tuoi = new Date();
+        const miliminusTime = tuoi.getTime() - this.dob.getTime();
+        const ageDay = Math.floor(miliminusTime / (1000 * 60 * 60 * 24));
+        return ageDay;
+    }
+    // tính tuổi theo năm
+    getAgeYear()
+    {
+        const tuoi = new Date();
+        const miliminusTime = now.getTime() - this.dob.getTime();
+        const ageDay = Math.floor(miliminusTime / (1000 * 60 * 60 * 24));
+        const ageYear = Math.floor(ageDay / 365);
+        return ageYear;
+    }
+}
+var listStudents = new Array(3);
+for(let i=0;i<listStudents.length;i++)
+{
+    alert(`Nhập thông tin SV thứ ${i+1} : `);
+    let id = prompt("Nhập ID: ");
+    let firstName = prompt("Nhập tên: ");
+    let lastName = prompt("Nhập họ: ");
+    let email = prompt("Enter email: ");
+    let phoneNumber = prompt("Nhập SDT: ");
+    let dobUser = prompt("Nhập ngày tháng năm sinh: ");
+    const result = dobUser.split(/[\/-]/);
+    let dob = result[2]+"/"+result[1]+"/"+result[0];
+    listStudents[i] = new SV(id, firstName, lastName, email, phoneNumber, dob);
+}
+//sắp xếp sv theo ngày tháng năm sinh
+for(let i=0;i<listStudents.length-1;i++)
+{
+    let minPos = i;
+    for(let j=i+1;j<listStudents.length;j++)
+    {
+        if(listStudents[j].getAgeDay()<listStudents[minPos].getAgeDay())
+        {
+            minPos = j;
+        }
+    }
+    var temp = listStudents[i];
+    listStudents[i] = listStudents[minPos];
+    listStudents[minPos] = temp;
+}
+//xuất thông tin SV theo tuổi tăng dần
+listStudents.forEach(student => {
+console.log(`${student.getFullName()},(${student.getAgeDay()} Ngày), (${student.getAgeYear()} Tuổi) ` );
+});
+console.log("Width window: " + window.screen.width);
+console.log("Height window: " + window.screen.height);
+  </script>
+</body>
+</html>
