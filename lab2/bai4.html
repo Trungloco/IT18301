@@ -9,10 +9,10 @@
 <body>
     <script>
         const days = ["Tue","Thu","Sat","Nine"];
-        days.pop();
-        days.push("Sun");
+        days.pop();//pop loại bỏ phần tử cuối cùng của một mảng.
+        days.push("Sun");//push thêm các mục mới vào cuối một mảng.
         days.unshift("Mon");
-        days.splice(2,1,"Wed","Thu","Fri");
+        days.splice(2,1,"Wed","Thu","Fri"); //splice chia một chuỗi thành một mảng các chuỗi con.
         document.writeln(days.join(" "));
     </script>
 </body>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       var hoTen = prompt("nhap vao ho va ten: ");
+       var gioiTinh = prompt("nhap vao gioi tinh: ");
+       var hoTenHopLe = hoTen.trim();
+       var ho = null;
+       var tenDem = null;
+       var ten = null;
+       for(var i=0;i<hoTenHopLe.length;i++)
+       {
+        if(hoTenHopLe[i]==" ")
+        {
+            ho = hoTenHopLe.slice(0,i);
+            hoTenHopLe = hoTenHopLe.slice(i).trim();
+            break;
+        }
+       }
+        var check = false;
+        for(var i=hoTenHopLe.length-1;i>=0;i--)
+       {
+        if(hoTenHopLe[i]==" ")
+        {
+            check = true;     
+            ten = hoTenHopLe.slice(i).trim();
+            tenDem = hoTenHopLe.slice(0,i);
+            break;
+        }
+       }
+       if(check==false)
+       {
+        ten = hoTenHopLe;
+        console.log("Ho: "+ho);
+        console.log("Ten: "+ten);
+        console.log("Ho va ten: "+ho+" "+ten);  
+       }
+       else
+       {
+        console.log("Ho: "+ho);
+        console.log("Ten dem: "+tenDem);
+        console.log("Ten: "+ten);
+        if(gioiTinh.toLowerCase()=="nam")
+        {
+            tenDem = "Van";
+        }
+        else if(gioiTinh.toLowerCase()=="nu")
+        {
+            tenDem = "Ve";    
+        }
+        console.log("Ho va ten: "+ho+" "+tenDem+" "+ten);
+       }
+
+    </script>
+</body>
+</html>
