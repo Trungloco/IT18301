@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>VIDEO PLAYER</h1>
+        <div id="player-container">
+            <video id="myplayer" width="600" height="400">
+                <source src="ChoBa.mp4" type="video/mp4">
+                I DON'T NO.
+            </video>
+            <div id="controls">
+                <button onclick="playPause()">Play/Pause</button>
+                <button onclick="stopVideo()">Stop</button>
+                <button onclick="replayVideo()">Replay</button>
+                <button onclick="increaseVolume()">Volume +</button>
+                <button onclick="decreaseVolume()">Volume -</button>
+                <button onclick="muteVolume()">Mute/Unmute</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var player = document.getElementById("myPlayer");
+
+        function playePause() {
+            if (player.Paused) { player.play();}
+            else { player.pause();}
+        }
+
+        function stopVideo() {
+            player.pause();
+            if (player.currenTime) { player.curentTime = 0;}
+        }
+
+        function replayVideo(){
+            player.curentTime=0;
+            player.play();
+        }
+
+        function increaseVolume(){
+            if (player.volume < 1)
+                player.volume = parseFloat (player.volume + 0.1).toFixed(1);
+        }
+        function decreaseVolume(){
+            if (play.volume > 0)
+                player.volume = parseFloat(player.volume - 0.1).toFixed(1);    
+        }
+
+        function muteVolume(){
+            if (player.muted) { player.muted = false;}
+            else {player.muted = true;}
+        }
+    </script>
+</body>
+</html>
