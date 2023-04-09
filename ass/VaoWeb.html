@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+	line-height: 1.5;
+	font-family: 'Poppins', sans-serif;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+/*Style cho header*/
+.header{
+     height: 95vh;
+     background-image: linear-gradient(to right bottom ,rgba(126, 213, 111, 0.6), rgba(40,180,131,0.6)) ,
+     url("https://posapp.vn/wp-content/uploads/2020/12/mau-phun-xam4.jpg");
+     background-size: cover;
+     background-position: bottom;
+     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+     position: relative;
+}
+.logo img{
+     height: 100px;
+ }
+.container{
+     position: absolute;
+     top: 40%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     text-align: center;
+ }
+ .heading{
+     color: #fff;
+     text-transform: uppercase;
+     margin-bottom: 60px;
+ }
+.heading-title{
+     display: block;
+     font-size: 60px;
+     font-weight: 400;
+     letter-spacing: 33px;
+     animation-name: hieu-ung-di-chuyen-sang-trai;
+     animation-duration: 2s;
+     animation-timing-function: ease-out;
+ }
+.heading-sub{
+     display: block;
+     font-size: 20px;
+     letter-spacing: 12px;
+     animation-name: hieu-ung-di-chuyen-sang-phai;
+     animation-duration: 2s;
+     animation-timing-function: ease-out;
+}
+/*NAV*/
+ul {
+  background: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+li {
+  float: left;
+}
+li a, .dropbtn{
+    display: inline block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+li.dropdown{
+    display: inline-block;
+}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #e7e7e7;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #FFF;
+}
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/*CONTENTS*/
+.row {
+ overflow: auto;
+ margin: 1.5em auto;
+}
+.row .col {
+ float: left;
+ width: 31.3333%;
+ margin-right: 2.99%;
+}
+.row .col:last-child {
+ float: right;
+ margin-right: 0;
+}
+.row .col img {
+ float: left;
+ margin-right: 1em;
+ width: 250px;
+ height: 300px;
+}
+/*FOOTER*/
+.containers{
+	max-width: 1170px;
+	margin:auto;
+}
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+ul{
+	list-style: none;
+}
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+.footer-col h4::before{
+	content: '';
+	position: absolute;
+	left:0;
+	bottom: -10px;
+	background-color: #e91e63;
+	height: 2px;
+	box-sizing: border-box;
+	width: 50px;
+}
+.footer-col ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+.footer-col ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+.footer-col .social-links a{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	background-color: rgba(255,255,255,0.2);
+	margin:0 10px 10px 0;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50%;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+	color: #24262b;
+	background-color: #ffffff;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    
+    <!-- HEADER TRANG WEB -->
+        <header>
+            <div class="header">
+                <div class="logo">
+                   <img src="https://png.pngtree.com/png-vector/20211126/ourlarge/pngtree-beauty-logo-png-image_4041135.png"  
+                   alt="Logo của website">
+                </div>
+                <div class="container">
+                  <h1 class="heading">
+                    <span class="heading-title">Làm Đẹp</span>
+                    <span class="heading-sub">Chúng Tôi Giúp Bạn Tỏa Sáng</span>
+                  </h1>
+                </div>
+                <h5>www.LamDep.com</h5>
+            </div>
+        </header>
+        <!-- MENU TRANG WEB  -->
+        <nav>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="">FEED</a>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropbtn">MAKEUP</a>
+                        <div class="dropdown-content">
+                           <a href="">SON</a>
+                           <a href="">PHẤN</a>
+                           <a href="">KEM NỀN</a>
+                        </div>
+                    </li>
+                    <li><a href="">SKIN</a></li>
+                    <li><a href="">HAIR</a></li>
+                    <li><a href="">FRAGRANCE</a></li>
+                    <li><a href="">TREND</a></li>
+                    <li><a href="">FOLOWING</a></li>
+                
+                </ul> 
+            </div>
+        </nav>
+        <!-- CONTENTS WEB -->
+        <contents>
+            <div class="contents">
+                <div class="row">
+                    <div id="box1" class="col">
+                        <h2>Son Dưỡng Ẩm</h2>
+                        <img src="https://product.hstatic.net/200000061028/product/3021986-1_f567d522d9eb4f9fad8a0892f26931f0_grande.jpg"/>
+                        <p>Giúp cho da môi được căng bóng mịn màng, tránh tình trạng bị khô môi và nứt nẻ</p>
+                    </div>
+                    <div id="box2" class="col">
+                        <h2>Nước Hoa Pháp</h2>
+                        <img src="https://hangphap.info/wp-content/uploads/2021/11/1573706668-1570691265-chanel-coco.jpg"/>
+                        <p>Tạo nên mùi hương quyến rủ cho bản thân, thu hút sự chú ý từ mọi người </p>
+                    </div>
+                    <div id="box3" class="col">
+                        <h2>Sản Phẩm Làm Đẹp Da</h2>
+                        <img src="https://cdn.shopify.com/s/files/1/0627/9164/7477/products/01_bdc-variant-sets-3StepSkincare_750x.jpg?v=1674592958" />
+                        <p>Làm trăng sáng da tự nhiên, giúp làn da luôn hồng hào trắng sáng và căng mịn</p>
+                    </div>
+                </div>
+            </div>
+        </contents>
+   <!-- FOOTER TRANG WEB -->
+        <footer class="footer">
+            <div class="containers">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Công ty</h4>
+                        <ul>
+                            <li><a href="#">Tìm hiểu về chúng tôi</a></li>
+                            <li><a href="#">Dịch vụ của chúng tôi</a></li>
+                            <li><a href="#">Chính sách</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Giúp Đỡ</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Vận chuyển</a></li>
+                            <li><a href="#">Tình trạng đặt hàng</a></li>
+                            <li><a href="#">Lựa chọn thanh toán</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Cửa hàng trực tuyến</h4>
+                        <ul>
+                            <li><a href="#">Son</a></li>
+                            <li><a href="#">Skin care</a></li>
+                            <li><a href="#">Nước Hoa</a></li>
+                            <li><a href="#">Tóc</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
